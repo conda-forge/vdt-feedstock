@@ -10,11 +10,10 @@ source:
   sha256: 643136a38d6890c1cf18074bd494f99a4f269429ac552c57907e28c0091df8e6
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [win]
   run_exports:
-    strong:
-      - vdt
+    - {{ pin_subpackage('vdt', max_pin='x.x.x') }}
 
 requirements:
   build:
