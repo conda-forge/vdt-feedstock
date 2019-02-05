@@ -1,5 +1,5 @@
 {% set name = "vdt" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/dpiparo/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 643136a38d6890c1cf18074bd494f99a4f269429ac552c57907e28c0091df8e6
+  sha256: 705674612ebb5c182b65a8f61f4d173eb7fe7cdeee2235b402541a492e08ace1
 
 build:
-  number: 1002
+  number: 0
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('vdt', max_pin='x.x.x') }}
