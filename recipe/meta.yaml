@@ -20,8 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-  host:
-  run:
+    - make
 
 test:
   # Some package might need a `test/commands` key to check CLI.
