@@ -5,7 +5,7 @@ mkdir build-dir
 cd build-dir
 
 # SSE off required for ARM and POWER builds
-cmake \
+cmake ${CMAKE_ARGS} \
     -DSSE=OFF \
     -DCMAKE_BUILD_TYPE=release \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
