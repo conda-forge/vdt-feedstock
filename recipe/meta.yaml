@@ -1,5 +1,5 @@
 {% set name = "vdt" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dpiparo/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8b1664b45ec82042152f89d171dd962aea9bb35ac53c8eebb35df1cb9c34e498
+  sha256: 1820feae446780763ec8bbb60a0dbcf3ae1ee548bdd01415b1fb905fd4f90c54
 
 build:
   number: 0
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make
